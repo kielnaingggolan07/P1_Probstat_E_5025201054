@@ -252,7 +252,39 @@
           > 0.7687209
           > hasil.varians
           > 0.7687209
-         ``` 
+         ```
+  4. Diketahui nilai x = 2 dan v = 10.
+     
+     - Fungsi Probabilitas dari Distribusi Chi-Square.
+       <br> Menggunakan fungsi bawaan Rstudio, <code>dchisq</code> </br>
+       <code>dchisq(x, v)</code>
+      
+       # Return
+        ```yml
+         0.007664155
+        ```
+       
+     - Histogram dari Distribusi Chi-Square dengan 100 data random.
+        ```yml
+         n = 100
+         hasil <- rchisq(n, v)
+         hist(hasil, main = "Chi-Square Histogram")
+        ```
+       
+     - Nilai Rataan (μ) dan Varian (σ²) dari DistribusiChi-Square.
+       <br> Menggunakan fungsi bawaan Rstudio, <code>mean, var</code> </br>
+       
+        ```yml
+         mean(hasil)
+         var(hasil)
+         ```
+        # Return
+        ```yml
+         > mean(hasil)
+         > 9.520746
+         > var(hasil)
+         > 17.4493
+        ```
          
   5. Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3)
      - Fungsi Probabilitas dari Distribusi Exponensi.
