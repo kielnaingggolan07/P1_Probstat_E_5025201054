@@ -290,36 +290,39 @@
      - Fungsi Probabilitas dari Distribusi Exponensi.
        <br> Membuat variabel dan values yang dibutuhkan</br>
          ```yml
-          rata.rata <- 3
-          e <-  2.71828
+         alpa = 3
+         data.x <- seq(1, 8, by = 1)
+         dexp(data.x, alpa)
          ```
-         kemudian membuat fungsi exponential:
+         
+      
+      -  Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan rando
          ```yml
-           fungsi.exponential <- function(x){
-                      hasil=rata.rata*e^(-rata.rata*x)
-                      return(hasil)
-                      }
-         ```
+         jika n = 10
+         n <- 10
+         set_data <- rexp(n, alpa = 3)
+         hist(set_data)
+         
+         jika n = 100 
+         n <- 100
+         set_data <- rexp(n, alpa = 3)
+         hist(set_data)
+         
+         jika n = 1,000
+         n <- 1000
+         set_data <- rexp(n, alpa = 3)
+         hist(set_data)
+         
+         jika n = 10,000  
+         n <- 10000
+         set_data <- rexp(n, rate = 3)
+         hist(set_data)
 
-      - 
-
-#soal5b
-f1 <- fungsi.exponential(10)
-f2 <- fungsi.exponential(100)
-f3 <- fungsi.exponential(1000)
-f4 <- fungsi.exponential(10000)
-grafik <- c(f1, f2, f3, f4)
-names(grafik) <- c(10, 100, 1000, 10000)
-grafik
-
-hist(grafik)
-           ```yml
-           
            ```
-#misal x=2
-fungsi.exponential(2)
-#untuk mengapus value
-remove(rata.rata, fungsi.exponential)
+
+
+
+
           
 | Nama               | NRP           |
 |--------------------|---------------|
