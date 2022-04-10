@@ -91,7 +91,58 @@
           > hasil.varians
           > 85.60181
          ```
- 2. 
+ 2. Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2.
+ 
+      - Peluang terdapat 4 pasien yang sembuh.
+        <br>Saya menggunakan 2 metode:</br>
+           - Menggunakan Rumus
+             <br>  Disini membuat variabel dan values: </br>
+               ```yml            
+                Banyak.Pasien <- 20
+                n<-20
+                peluang.Sembuh <- 0.2
+                p<- 0.2
+                x <- 4
+                q <- 1-p
+               ```
+               Kemudian, membuat for untuk kombinasi:
+                ```yml
+                 x1 <- 1
+                 x2 <- 1
+                 x3 <- 1
+                 for( i in 1:n){
+                        x1 <- x1*i
+                 }
+                 for(i in 1:x){
+                        x2 <- x2*i
+                 }
+                 for(i in 1:(n-x)){
+                        x3 <- x3*i
+                }
+               ```
+               Kemudian, hasil dari kombinasi dimasukkan kedalam variabel <code>hasil</code>
+               ```yml
+                hasil <- x1/(x2*x3)
+               ```
+               Terakhir, yaitu menghitung peluang menggunakan Rumus Distribusi Binomial
+               ```yml
+                g <-hasil*(p^x)*q^(n-x)
+               ```
+              # Result
+             ```yml
+              > g
+              > 0.2181994
+             ```
+           - Menggunakan fungsi bawaan Rstudio <code>dbinom</code>  
+               ```yml
+                g2 <- dbinom(x = 4, size = 20, prob = 0.2)
+               ```
+              # Result
+               ```yml
+               > g2
+               > 0.2181994
+               ```
+
      
 | Nama               | NRP           |
 |--------------------|---------------|
