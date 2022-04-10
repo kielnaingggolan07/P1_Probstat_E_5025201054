@@ -315,10 +315,21 @@
          
          jika n = 10,000  
          n <- 10000
-         set_data <- rexp(n, rate = 3)
+         set_data <- rexp(n, alpa = 3)
          hist(set_data)
+         
+         ```
+         
+       - Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
+          ```yml
+           set.seed(1) 
+           x <- 100
+           alpa <- 3
+           set_data <- rexp(x, alpa)
+           mean(set_data)
+           var(set_data)
+          ```
 
-           ```
 
 
 
