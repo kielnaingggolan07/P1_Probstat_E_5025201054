@@ -1,27 +1,35 @@
+
 #soal5a
-rata.rata <- 3
-e <-  2.71828
-fungsi.exponential <- function(x){
-  hasil=rata.rata*e^(-rata.rata*x)
-  return(hasil)
-}
-#misal x=2
-fungsi.exponential(2)
-#untuk mengapus value
-remove(rata.rata, fungsi.exponential)
+alpa = 3
+#data yang diambil 1 - 8
+data.x <- seq(1, 8, by = 1)
+dexp(data.x, alpa)
 
 #soal5b
-f1 <- fungsi.exponential(10)
-f2 <- fungsi.exponential(100)
-f3 <- fungsi.exponential(1000)
-f4 <- fungsi.exponential(10000)
-grafik <- c(f1, f2, f3, f4)
-names(grafik) <- c(10, 100, 1000, 10000)
-grafik
+# jika n =10        
+n <- 10
+set_data <- rexp(n, alpa = 3)
+hist(set_data)
 
-hist(grafik)
+# jika n = 100 
+n <- 100
+set_data <- rexp(n, alpa = 3)
+hist(set_data)
+
+# jika n = 1,000
+n <- 1000
+set_data <- rexp(n, alpa = 3)
+hist(set_data)
+
+# jika n = 10,000  
+n <- 10000
+set_data <- rexp(n, rate = 3)
+hist(set_data)
 
 #soal5c
-alpa<- 3
-rataan <- 1/alpa
-varian <- 1/alpa^2
+set.seed(1) 
+x <- 100
+alpa <- 3
+set_data <- rexp(x, rate)
+mean(set_data)
+var(set_data)
