@@ -179,8 +179,81 @@
             > varians
             > 3.2
            ``` 
-varians
-     
+           
+   3. Diketahui data dari sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis
+        4,5 bayi lahir di rumah sakit ini setiap hari. 
+        
+       - Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?.
+         <br>Mendeklarasikan variabel serta value yang dibutuhkan, serta menggunakan rumus Diagram Poisson:</br>
+         ```yml
+          Rata.rata <- 4.5
+          x <- 6
+          x.faktorial <- 1
+          for (i in 1:x) {
+                x.faktorial <- x.faktorial*i }
+         ```   
+           Kemudian masukkan kedalam rumus:
+         
+         ```yml
+          peluang <- 2.7182818^(-Rata.rata)*(Rata.rata^x)/x.faktorial
+         ```
+           atau dapat menggunakan rumus bawaan Rstudio <code>dpois</code>
+           
+         ```yml
+         peluang2 <- dpois(x=6, lambda = 4.5)
+         ```
+         
+          # Result
+          ```yml
+           > peluang
+           > 0.1281201
+           > peluang2
+           > 0.1281201
+          ```
+         
+       - simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini selama
+         setahun (n = 365)
+         
+         ```yml
+          n <-365
+          Rata.rata.setahun2<-ppois(q = 6, lambda = 4.5, lower.tail = 365)
+          hist(Rata.rata.setahun2)
+         ```
+         
+          # Result
+           ```yml
+             shreenshoot soal3
+           ```
+           
+       -  dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan.
+         <br> Membandingkan antara peluang dan Rata.rata.setahun2</br>
+          ```yml
+           Banding<- peluang == Rata.rata.setahun2
+           "karena hasil tidak sama maka berupa false "
+          ```
+          
+         # Result
+         ```yml
+           > Banding
+           > FALSE
+         ```
+         
+       - Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.
+       
+         ```yml
+          hasil.ratan <- x*peluang
+          hasil.varians <-x*peluang 
+         ```
+         
+         # Return
+         
+         ```yml
+          > hasil.ratan
+          > 0.7687209
+          > hasil.varians
+          > 0.7687209
+         ``` 
+          
 | Nama               | NRP           |
 |--------------------|---------------|
 |Hesekiel Nainggolan |5025201054     |
