@@ -142,7 +142,44 @@
                > g2
                > 0.2181994
                ```
-
+               
+      - Gambarkan grafik histogram berdasarkan kasus tersebut.
+         ```yml  
+          soal2b, dengan semua x(1:4) dicoba
+          g.total<- c(1:4)
+          x.total<- c(1:4)
+          g.total <- hasil*(p^x.total)*q^(n-x.total)
+          g.total
+         ```
+         <code>Histogram Distribusi Binomial</code>
+        
+         ```yml 
+          hist (g.total, freq = TRUE,
+          main ='Histogram Frekuensi Distribusi Binomial ',
+          ylab = 'x',
+          xlab = 'F(X=x)',
+          col = 'green')
+         ```
+       
+        # Result
+          ```yml
+           Shrenshoot soal2.
+          ```
+        
+      - Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial.
+         ```yml
+          Rata.rata <- n*p
+          varians <- Rata.rata*q
+         ```
+         
+         # Result
+           ```yml
+            > Rata.rata
+            > 4
+            > varians
+            > 3.2
+           ``` 
+varians
      
 | Nama               | NRP           |
 |--------------------|---------------|
